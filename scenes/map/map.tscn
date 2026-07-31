@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://usiabo4oiiwt"]
+
+[ext_resource type="Texture2D" uid="uid://doghmovcgeltw" path="res://assets/graphics/map.png" id="1_202iy"]
+[ext_resource type="PackedScene" uid="uid://b5eyvji3yfrxe" path="res://scenes/map/big_tree.tscn" id="2_tqkkf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqkkf"]
+size = Vector2(12, 644)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2pkv"]
+size = Vector2(385, 11)
+
+[node name="map" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [-323.0, -318.0]
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 2)
+texture = ExtResource("1_202iy")
+
+[node name="trees" type="Node2D" parent="."]
+
+[node name="big_tree4" parent="trees" instance=ExtResource("2_tqkkf")]
+position = Vector2(-138, 203)
+
+[node name="big_tree3" parent="trees" instance=ExtResource("2_tqkkf")]
+position = Vector2(-71, 204)
+
+[node name="big_tree2" parent="trees" instance=ExtResource("2_tqkkf")]
+position = Vector2(-71, 302)
+
+[node name="big_tree" parent="trees" instance=ExtResource("2_tqkkf")]
+position = Vector2(-139, 302)
+
+[node name="borders" type="Node2D" parent="."]
+
+[node name="left_border" type="StaticBody2D" parent="borders"]
+position = Vector2(-195, -24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders/left_border"]
+position = Vector2(-4, 26)
+shape = SubResource("RectangleShape2D_tqkkf")
+
+[node name="right_border" type="StaticBody2D" parent="borders"]
+position = Vector2(201, -24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders/right_border"]
+position = Vector2(-4, 26)
+shape = SubResource("RectangleShape2D_tqkkf")
+
+[node name="top_border" type="StaticBody2D" parent="borders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders/top_border"]
+position = Vector2(0.5, -323.5)
+shape = SubResource("RectangleShape2D_a2pkv")
+
+[node name="bottom_border" type="StaticBody2D" parent="borders"]
+position = Vector2(-3, 651)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders/bottom_border"]
+position = Vector2(0.5, -323.5)
+shape = SubResource("RectangleShape2D_a2pkv")
