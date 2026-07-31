@@ -14,6 +14,11 @@ config/name="frogger_game_practice"
 run/main_scene="uid://ukjac40cjoqf"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=180
+
 [input]
 
 up={

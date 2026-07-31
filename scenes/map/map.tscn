@@ -16,8 +16,10 @@ metadata/_edit_lock_ = true
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, 2)
 texture = ExtResource("1_202iy")
+metadata/_edit_lock_ = true
 
 [node name="trees" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="big_tree4" parent="trees" instance=ExtResource("2_tqkkf")]
 position = Vector2(-138, 203)
@@ -32,6 +34,7 @@ position = Vector2(-71, 302)
 position = Vector2(-139, 302)
 
 [node name="borders" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="left_border" type="StaticBody2D" parent="borders"]
 position = Vector2(-195, -24)

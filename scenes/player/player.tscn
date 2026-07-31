@@ -1,7 +1,19 @@
-[gd_scene load_steps=11 format=3 uid="uid://dur656xn3f4xw"]
+[gd_scene load_steps=14 format=3 uid="uid://dur656xn3f4xw"]
 
 [ext_resource type="Script" uid="uid://7vjynaumf2j2" path="res://scenes/player/player.gd" id="1_dovo2"]
 [ext_resource type="Texture2D" uid="uid://c4q6c7mxqh78h" path="res://assets/graphics/player/player_tileset.png" id="2_dovo2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qek5x"]
+atlas = ExtResource("2_dovo2")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gtgg"]
+atlas = ExtResource("2_dovo2")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h17s1"]
+atlas = ExtResource("2_dovo2")
+region = Rect2(16, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gmlin"]
 atlas = ExtResource("2_dovo2")
@@ -29,6 +41,23 @@ region = Rect2(32, 32, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_75vfm"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qek5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gtgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qek5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h17s1")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gmlin")
@@ -60,7 +89,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_0owmy")
 }],
 "loop": true,
-"name": &"vertical",
+"name": &"up",
 "speed": 5.0
 }]
 
@@ -72,15 +101,14 @@ script = ExtResource("1_dovo2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_75vfm")
-animation = &"vertical"
-autoplay = "horizontal"
-frame_progress = 0.9338362
+animation = &"up"
+autoplay = "up"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
-limit_left = -192
+limit_left = -191
 limit_top = -317
-limit_right = 192
+limit_right = 191
 limit_bottom = 317
 limit_smoothed = true
 position_smoothing_enabled = true
