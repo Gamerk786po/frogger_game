@@ -8,22 +8,26 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _physics_process(_delta) -> void:
+	# Get direction from the movement of player
 	direction = Input.get_vector("left", "right", "up", "down")
-	animation()
+	animation() # Movement_animation
 	velocity = direction * speed
 	move_and_slide()
 
 func animation() -> void:
 	# When direction is true => means user is constantly trying to move
 	if direction:
-		# Fling depends on the direction of x axis, when x is negative
-		# user move left and when x is positive user moves right
+		# Fling depends on the direction of x-axis
 		$AnimatedSprite2D.flip_h = (direction.x > 0)
+		# When x is not zero
 		if direction.x != 0:
+			# Set animation to horizontal
 			$AnimatedSprite2D.animation = "horizontal"
 		else:
+			# If direction is not zero
 			if direction.y != 0:
+				# Direction of animation depends on the direction of y-axis
 				$AnimatedSprite2D.animation = "down" if direction.y > 0 else "up"
 	else:
 		$AnimatedSprite2D.frame = 0

@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://ukjac40cjoqf"]
+[gd_scene load_steps=4 format=3 uid="uid://ukjac40cjoqf"]
 
+[ext_resource type="Script" uid="uid://bggusnxqusisu" path="res://scenes/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://usiabo4oiiwt" path="res://scenes/map/map.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://dur656xn3f4xw" path="res://scenes/player/player.tscn" id="2_yqjtg"]
 
-[node name="Node2D" type="Node2D"]
+[node name="game" type="Node2D"]
+script = ExtResource("1_lnu2h")
 metadata/_edit_horizontal_guides_ = [-321.0, -320.0]
 
 [node name="map" parent="." instance=ExtResource("1_uwrxv")]
@@ -11,3 +13,36 @@ position = Vector2(-1, -6)
 
 [node name="player" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(-105, 300)
+
+[node name="timers" type="Node" parent="."]
+
+[node name="car_timer" type="Timer" parent="timers"]
+wait_time = 0.6
+autostart = true
+
+[node name="cars" type="Node" parent="."]
+
+[node name="car_spawning_postions" type="Node" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="car_spawning_postions"]
+position = Vector2(-192, -120)
+
+[node name="Marker2D2" type="Marker2D" parent="car_spawning_postions"]
+position = Vector2(-190, -29)
+
+[node name="Marker2D3" type="Marker2D" parent="car_spawning_postions"]
+position = Vector2(-193, 86)
+
+[node name="Marker2D4" type="Marker2D" parent="car_spawning_postions"]
+position = Vector2(-192, 135)
+
+[node name="Marker2D6" type="Marker2D" parent="car_spawning_postions"]
+position = Vector2(187, -99)
+
+[node name="Marker2D8" type="Marker2D" parent="car_spawning_postions"]
+position = Vector2(186, 108)
+
+[node name="Marker2D9" type="Marker2D" parent="car_spawning_postions"]
+position = Vector2(187, 160)
+
+[connection signal="timeout" from="timers/car_timer" to="." method="_on_car_timer_timeout"]
