@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://usiabo4oiiwt"]
+[gd_scene load_steps=4 format=3 uid="uid://usiabo4oiiwt"]
 
 [ext_resource type="Texture2D" uid="uid://doghmovcgeltw" path="res://assets/graphics/map.png" id="1_202iy"]
-[ext_resource type="PackedScene" uid="uid://b5eyvji3yfrxe" path="res://scenes/map/big_tree.tscn" id="2_tqkkf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tqkkf"]
 size = Vector2(12, 644)
@@ -18,26 +17,12 @@ position = Vector2(-1, 2)
 texture = ExtResource("1_202iy")
 metadata/_edit_lock_ = true
 
-[node name="trees" type="Node2D" parent="."]
-metadata/_edit_lock_ = true
-
-[node name="big_tree4" parent="trees" instance=ExtResource("2_tqkkf")]
-position = Vector2(-138, 203)
-
-[node name="big_tree3" parent="trees" instance=ExtResource("2_tqkkf")]
-position = Vector2(-71, 204)
-
-[node name="big_tree2" parent="trees" instance=ExtResource("2_tqkkf")]
-position = Vector2(-71, 302)
-
-[node name="big_tree" parent="trees" instance=ExtResource("2_tqkkf")]
-position = Vector2(-139, 302)
-
 [node name="borders" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
 
 [node name="left_border" type="StaticBody2D" parent="borders"]
 position = Vector2(-195, -24)
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="borders/left_border"]
 position = Vector2(-4, 26)
@@ -45,12 +30,14 @@ shape = SubResource("RectangleShape2D_tqkkf")
 
 [node name="right_border" type="StaticBody2D" parent="borders"]
 position = Vector2(201, -24)
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="borders/right_border"]
 position = Vector2(-4, 26)
 shape = SubResource("RectangleShape2D_tqkkf")
 
 [node name="top_border" type="StaticBody2D" parent="borders"]
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="borders/top_border"]
 position = Vector2(0.5, -323.5)
@@ -58,6 +45,7 @@ shape = SubResource("RectangleShape2D_a2pkv")
 
 [node name="bottom_border" type="StaticBody2D" parent="borders"]
 position = Vector2(-3, 651)
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="borders/bottom_border"]
 position = Vector2(0.5, -323.5)

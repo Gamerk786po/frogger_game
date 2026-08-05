@@ -20,3 +20,8 @@ func _on_car_timer_timeout() -> void:
 	var marker = $car_spawning_postions.get_children().pick_random()
 	car.position = marker.position
 	$cars.add_child(car)
+	car.connect("body_entered", player_collided)
+
+func player_collided(body) -> void :
+	print(body)
+	print("Game Over!")
