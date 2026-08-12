@@ -96,6 +96,10 @@ position = Vector2(-1, -6)
 wait_time = 0.19
 autostart = true
 
+[node name="score_timer" type="Timer" parent="timers"]
+wait_time = 0.6
+autostart = true
+
 [node name="cars" type="Node" parent="."]
 
 [node name="car_spawning_postions" type="Node" parent="."]
@@ -409,6 +413,7 @@ offset_bottom = 23.0
 grow_horizontal = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 40
-text = "Hello"
+text = "0"
 
 [connection signal="timeout" from="timers/car_timer" to="." method="_on_car_timer_timeout"]
+[connection signal="timeout" from="timers/score_timer" to="." method="_on_score_timer_timeout"]
