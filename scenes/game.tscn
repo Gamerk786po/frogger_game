@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d1h0ksxlju0ou" path="res://assets/graphics/objects/house1.png" id="6_264po"]
 [ext_resource type="Texture2D" uid="uid://b778fphjcav0" path="res://assets/graphics/objects/light.png" id="7_1kice"]
 [ext_resource type="Texture2D" uid="uid://58kopy31xbf8" path="res://assets/graphics/objects/taxi.png" id="8_5newe"]
-[ext_resource type="Texture2D" uid="uid://cgvtilagem3np" path="res://assets/graphics/objects/red car.png" id="9_37s47"]
+[ext_resource type="Texture2D" uid="uid://cgvtilagem3np" path="res://assets/graphics/red car.png" id="9_37s47"]
 [ext_resource type="Texture2D" uid="uid://y78osdw0bolc" path="res://assets/graphics/objects/box1.png" id="10_bt5mj"]
 [ext_resource type="Texture2D" uid="uid://cuqeolw7yvunc" path="res://assets/graphics/objects/box3.png" id="11_e1j6l"]
 [ext_resource type="Texture2D" uid="uid://dxciltwc3sgll" path="res://assets/graphics/objects/house2.png" id="12_pl11u"]
@@ -54,7 +54,7 @@ size = Vector2(16, 21)
 size = Vector2(18, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgl2t"]
-size = Vector2(62, 104)
+size = Vector2(62, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qouja"]
 size = Vector2(28, 10)
@@ -93,7 +93,7 @@ position = Vector2(-1, -6)
 [node name="timers" type="Node" parent="."]
 
 [node name="car_timer" type="Timer" parent="timers"]
-wait_time = 0.15
+wait_time = 0.19
 autostart = true
 
 [node name="cars" type="Node" parent="."]
@@ -182,8 +182,8 @@ position = Vector2(159, 30)
 texture = ExtResource("11_e1j6l")
 
 [node name="House2" type="Sprite2D" parent="Objects/Environment/sprites"]
-position = Vector2(-162, 20)
-scale = Vector2(0.775, 0.91964287)
+position = Vector2(-162.5, 41.25)
+scale = Vector2(0.7374999, 0.57589287)
 texture = ExtResource("12_pl11u")
 
 [node name="Line" type="Sprite2D" parent="Objects/Environment/sprites"]
@@ -297,130 +297,118 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(213, -302)
 shape = SubResource("RectangleShape2D_bt5mj")
-metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(125.666664, -300.66666)
 polygon = PackedVector2Array(39.333336, -23.333344, -63.666664, -23.333344, -64.666664, 8.6666565, -159.66666, 8.6666565, -159.66666, 52.666656, -159.66666, 55.666656, -159.66666, 87.66666, 39.333336, 86.66666)
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(-21, -205)
 shape = SubResource("RectangleShape2D_1kice")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(-65, -188)
 shape = SubResource("RectangleShape2D_5newe")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(-46.5, -191)
 shape = SubResource("RectangleShape2D_37s47")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(231, -181)
 shape = SubResource("RectangleShape2D_264po")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(183, -60)
 shape = SubResource("RectangleShape2D_e1j6l")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(152, -59.5)
 shape = SubResource("RectangleShape2D_e1j6l")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(-89, -59.5)
 shape = SubResource("RectangleShape2D_pl11u")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(135, 54)
 shape = SubResource("RectangleShape2D_bhx41")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(185.5, 255)
 shape = SubResource("RectangleShape2D_qnb83")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(191, 78.5)
 shape = SubResource("RectangleShape2D_sww3w")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(223, 77)
 shape = SubResource("RectangleShape2D_suyxu")
-metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Objects/Environment/StaticBody2D"]
 polygon = PackedVector2Array(216, 43, 200, 43, 200, 51, 189, 51, 189, 61, 201, 61, 201, 53, 215, 53, 215, 61, 227, 61, 227, 51, 216, 51)
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
-position = Vector2(-113, 40)
+position = Vector2(-113, 59.5)
 shape = SubResource("RectangleShape2D_sgl2t")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(-67, 56)
 shape = SubResource("RectangleShape2D_qouja")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(-27.5, 35)
 shape = SubResource("RectangleShape2D_wljb1")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(-78.5, 35)
 shape = SubResource("RectangleShape2D_wljb1")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(16, 81)
 shape = SubResource("RectangleShape2D_v2yb1")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(-23.5, 67)
 shape = SubResource("RectangleShape2D_js0lu")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(43, 33)
 shape = SubResource("RectangleShape2D_gxtfn")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(-87, 229.25)
 shape = SubResource("RectangleShape2D_twgab")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
-position = Vector2(34, 233.125)
+position = Vector2(33, 233)
 shape = SubResource("RectangleShape2D_02fa5")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(153.5, 264)
 shape = SubResource("RectangleShape2D_nepv3")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(102.25, 264.5)
 shape = SubResource("RectangleShape2D_nepv3")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
 position = Vector2(163.5, 294.5)
 shape = SubResource("RectangleShape2D_7025r")
-metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "Hello"
 
 [connection signal="timeout" from="timers/car_timer" to="." method="_on_car_timer_timeout"]
