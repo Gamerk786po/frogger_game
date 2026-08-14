@@ -28,6 +28,7 @@ func _on_car_timer_timeout() -> void:
 func player_collided(_body) -> void :
 	call_deferred("go_to_title")
 	Global.score = score
+	
 
 func go_to_title() -> void:
 	get_tree().change_scene_to_file("res://scenes/Title/title.tscn")

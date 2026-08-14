@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://0lgdgi330oq6"
+path="res://.godot/imported/S31-City on Speed.ogg-e1ec97d637488c6ad0a03b4ed10912f4.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/S31-City on Speed.ogg"
+dest_files=["res://.godot/imported/S31-City on Speed.ogg-e1ec97d637488c6ad0a03b4ed10912f4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

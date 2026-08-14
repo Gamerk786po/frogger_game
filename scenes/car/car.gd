@@ -15,6 +15,7 @@ func _ready() -> void:
 		direction = Vector2.RIGHT
 		$Sprite2D.flip_h = true		
 	$Sprite2D.texture = colors.pick_random()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	position += direction * speed * delta

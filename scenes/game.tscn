@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://ukjac40cjoqf"]
+[gd_scene load_steps=42 format=3 uid="uid://ukjac40cjoqf"]
 
 [ext_resource type="Script" uid="uid://bggusnxqusisu" path="res://scenes/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://usiabo4oiiwt" path="res://scenes/map/map.tscn" id="1_uwrxv"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cfe22lwgaf1k2" path="res://assets/graphics/objects/traffic.png" id="17_rysoc"]
 [ext_resource type="Texture2D" uid="uid://73gfa8tjrcik" path="res://assets/graphics/objects/house3.png" id="17_sgl2t"]
 [ext_resource type="Texture2D" uid="uid://b8fq8sgkmu4dx" path="res://assets/graphics/objects/green car.png" id="18_1kice"]
+[ext_resource type="AudioStream" uid="uid://0lgdgi330oq6" path="res://assets/sounds/S31-City on Speed.ogg" id="20_1kice"]
 [ext_resource type="Texture2D" uid="uid://d0dya2slufckd" path="res://assets/graphics/cars/green.png" id="20_37s47"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bt5mj"]
@@ -124,6 +125,12 @@ position = Vector2(186, 108)
 
 [node name="Marker2D9" type="Marker2D" parent="car_spawning_postions"]
 position = Vector2(187, 160)
+
+[node name="Marker2D5" type="Marker2D" parent="car_spawning_postions"]
+position = Vector2(181, -57)
+
+[node name="Marker2D7" type="Marker2D" parent="car_spawning_postions"]
+position = Vector2(181, -1)
 
 [node name="Objects" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -299,7 +306,7 @@ collision_layer = 16
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Environment/StaticBody2D"]
-position = Vector2(213, -302)
+position = Vector2(209, -285)
 shape = SubResource("RectangleShape2D_bt5mj")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/Environment/StaticBody2D"]
@@ -414,6 +421,11 @@ grow_horizontal = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "0"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_1kice")
+volume_db = -20.0
+autoplay = true
 
 [connection signal="timeout" from="timers/car_timer" to="." method="_on_car_timer_timeout"]
 [connection signal="timeout" from="timers/score_timer" to="." method="_on_score_timer_timeout"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dltsyahaqqcvk"]
+[gd_scene load_steps=5 format=3 uid="uid://dltsyahaqqcvk"]
 
 [ext_resource type="FontFile" uid="uid://dr201ov4c76pb" path="res://assets/fonts/Crackman.otf" id="1_6pw0v"]
 [ext_resource type="Script" uid="uid://dn60u4hcystbs" path="res://scenes/Title/title.gd" id="1_u73ie"]
 [ext_resource type="Texture2D" uid="uid://bkgrir378horu" path="res://assets/graphics/player/player_simple.png" id="2_u73ie"]
+[ext_resource type="AudioStream" uid="uid://d2v0jegloynjx" path="res://assets/sounds/fahhhhh.mp3" id="4_deph6"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -70,3 +71,6 @@ offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Score: 0"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_deph6")
